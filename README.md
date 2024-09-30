@@ -9,6 +9,9 @@ This project is a simple API for managing a todo list, built with Spring Boot.
 - `PUT /api/todos/{id}`
 - `DELETE /api/todos/{id}`
 
+### Swagger UI
+- `/swagger-ui/index.html`
+
 ### Build the .jar
 - Add permission to Maven
 - `sudo chmod +x ./mvnw`

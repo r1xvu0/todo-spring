@@ -4,13 +4,21 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 @Entity
 public class Todo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @NotNull
     private long id;
+
+    @NotNull
+    @Size(min = 1, max = 30)
     private String title;
+
+    @NotNull
     private boolean completed;
 
     public Long getId() {
