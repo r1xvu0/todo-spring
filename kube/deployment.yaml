@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todo-spring
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: todo-spring
+  template:
+    metadata:
+      labels:
+        app: todo-spring
+    spec:
+      containers:
+        - name: todo-spring
+          image: r1xvu0/todo-spring:latest
+          ports:
+            - containerPort: 8080
